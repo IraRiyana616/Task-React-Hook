@@ -31,7 +31,7 @@ function Feedback() {
   const handleDeleteFeedback = (id) => {
     setFeedbacks((prevFeedbacks) => {
       const updatedFeedbacks = prevFeedbacks.filter((item) => item.id !== id);
-      localStorage.setItem('suggestions', JSON.stringify(updatedFeedbacks));
+      localStorage.setItem('feedbacks', JSON.stringify(updatedFeedbacks));
       return updatedFeedbacks;
     });
   };
