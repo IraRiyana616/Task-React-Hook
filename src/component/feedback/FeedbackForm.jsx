@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import '/src/App.css';
 
-function SuggestionForm({ onAddSuggestion }) {
+function FeedbackForm({ onAddFeedback }) {
   const [name, setName] = useState('');
-  const [suggestion, setSuggestion] = useState('');
+  const [feedback, setFeedback] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name && suggestion) {
-      onAddSuggestion(name, suggestion);
+    if (name && feedback) {
+      onAddFeedback(name, feedback);
       setName('');
-      setSuggestion('');
+      setFeedback('');
     }
   };
 
   return (
-    <form className="suggestion-form" onSubmit={handleSubmit}>
+    <form className="feedback-form" onSubmit={handleSubmit}>
       {/* Form Untuk Nama */}
       <div className="form-group">
         <input
@@ -30,9 +30,9 @@ function SuggestionForm({ onAddSuggestion }) {
       {/* Form Untuk Saran  */}
       <div className="form-group">
         <textarea
-          id="suggestion"
-          value={suggestion}
-          onChange={(e) => setSuggestion(e.target.value)}
+          id="feedback"
+          value={feedback}
+          onChange={(e) => setFeedback(e.target.value)}
           placeholder="Masukkan Saran Anda "
           className="form-textarea"
         />
@@ -46,4 +46,4 @@ function SuggestionForm({ onAddSuggestion }) {
   );
 }
 
-export default SuggestionForm;
+export default FeedbackForm;

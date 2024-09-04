@@ -4,7 +4,7 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FaUserCircle } from 'react-icons/fa';
 import '/src/App.css';
 
-function SuggestionList({ suggestions, onLikeSuggestion }) {
+function FeedbackList({ feedbacks, onLikeFeedback }) {
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleShowMore = () => {
@@ -13,27 +13,27 @@ function SuggestionList({ suggestions, onLikeSuggestion }) {
 
   return (
     <div>
-      <ul className="suggestion-list">
-        {suggestions
+      <ul className="feedback-list">
+        {feedbacks
           .slice(0, visibleCount)
-          .map(({ id, name, suggestion, likes }) => (
-            <li key={id} className="suggestion-item">
-              <div className="suggestion-content">
+          .map(({ id, name, feedback, likes }) => (
+            <li key={id} className="feedback-item">
+              <div className="feedback-content">
                 <div className="name-avatar">
                   <FaUserCircle className="avatar-icon" />
-                  <h3 className="suggestion-name">{name}</h3>
+                  <h3 className="feedback-name">{name}</h3>
                 </div>
-                <p className="suggestion-text">{suggestion}</p>
+                <p className="feedback-text">{feedback}</p>
                 <button
                   className="like-button"
-                  onClick={() => onLikeSuggestion(id)}>
+                  onClick={() => onLikeFeedback(id)}>
                   <FontAwesomeIcon icon={faThumbsUp} /> ({likes})
                 </button>
               </div>
             </li>
           ))}
       </ul>
-      {visibleCount < suggestions.length && (
+      {visibleCount < feedbacks.length && (
         <button className="show-more-button" onClick={handleShowMore}>
           Lihat Selengkapnya
         </button>
@@ -42,4 +42,4 @@ function SuggestionList({ suggestions, onLikeSuggestion }) {
   );
 }
 
-export default SuggestionList;
+export default FeedbackList;

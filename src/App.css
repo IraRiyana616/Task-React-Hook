@@ -77,14 +77,14 @@ h1 {
   background-color: #4d4d4d;
 }
 
-.suggestion-list {
+.feedback-list {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-left: 52px;
 }
 
-.suggestion-item {
+.feedback-item {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -93,17 +93,17 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.suggestion-content {
+.feedback-content {
   display: flex;
   flex-direction: column;
 }
 
-.suggestion-name {
+.feedback-name {
   font-size: 20px;
   font-weight: bold;
 }
 
-.suggestion-text {
+.feedback-text {
   margin-top: 12px;
   margin-left: 20px;
   font-size: 18px;

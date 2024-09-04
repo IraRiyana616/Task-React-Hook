@@ -1,40 +1,38 @@
 import React, { useState } from 'react';
-import SuggestionForm from '/src/component/feedback/FeedbackForm';
-import SuggestionList from '/src/component/feedback/FeedbackList';
+import FeedbackForm from '/src/component/feedback/FeedbackForm';
+import FeedbackList from '/src/component/feedback/FeedbackList';
 import '/src/App.css';
 
-function Comentar() {
-  const [suggestions, setSuggestions] = useState(() => {
-    const savedSuggestions = localStorage.getItem('suggestions');
-    return savedSuggestions ? JSON.parse(savedSuggestions) : [];
+function Feedback() {
+  const [feedbacks, setFeedbacks] = useState(() => {
+    const savedFeedbacks = localStorage.getItem('feedbacks');
+    return savedFeedbacks ? JSON.parse(savedFeedbacks) : [];
   });
 
-  const handleAddSuggestion = (name, suggestion) => {
-    setSuggestions((prevSuggestions) => {
-      const newSuggestion = { id: Date.now(), name, suggestion, likes: 0 };
-      const updatedSuggestions = [...prevSuggestions, newSuggestion];
-      localStorage.setItem('suggestions', JSON.stringify(updatedSuggestions));
-      return updatedSuggestions;
+  const handleAddFeedback = (name, feedback) => {
+    setFeedbacks((prevFeedbacks) => {
+      const newFeedback = { id: Date.now(), name, feedback, likes: 0 };
+      const updatedFeedbacks = [...prevFeedbacks, newFeedback];
+      localStorage.setItem('feedbacks', JSON.stringify(updatedFeedbacks));
+      return updatedFeedbacks;
     });
   };
 
-  const handleLikeSuggestion = (id) => {
-    setSuggestions((prevSuggestions) => {
-      const updatedSuggestions = prevSuggestions.map((item) =>
+  const handleLikeFeedback = (id) => {
+    setFeedbacks((prevFeedbacks) => {
+      const updatedFeedbacks = prevFeedbacks.map((item) =>
         item.id === id ? { ...item, likes: item.likes + 1 } : item
       );
-      localStorage.setItem('suggestions', JSON.stringify(updatedSuggestions));
-      return updatedSuggestions;
+      localStorage.setItem('feedbacks', JSON.stringify(updatedFeedbacks));
+      return updatedFeedbacks;
     });
   };
 
-  const handleDeleteSuggestion = (id) => {
-    setSuggestions((prevSuggestions) => {
-      const updatedSuggestions = prevSuggestions.filter(
-        (item) => item.id !== id
-      );
-      localStorage.setItem('suggestions', JSON.stringify(updatedSuggestions));
-      return updatedSuggestions;
+  const handleDeleteFeedback = (id) => {
+    setFeedbacks((prevFeedbacks) => {
+      const updatedFeedbacks = prevFeedbacks.filter((item) => item.id !== id);
+      localStorage.setItem('suggestions', JSON.stringify(updatedFeedbacks));
+      return updatedFeedbacks;
     });
   };
 
@@ -51,14 +49,14 @@ function Comentar() {
         style={{ marginLeft: '55px', fontWeight: 'normal' }}>
         Silakan masukkan kritik dan saran Anda
       </p>
-      <SuggestionForm onAddSuggestion={handleAddSuggestion} />
-      <SuggestionList
-        suggestions={suggestions}
-        onLikeSuggestion={handleLikeSuggestion}
-        onDeleteSuggestion={handleDeleteSuggestion}
+      <FeedbackForm onAddFeedback={handleAddFeedback} />
+      <FeedbackList
+        feedbacks={feedbacks}
+        onLikeFeedback={handleLikeFeedback}
+        onDeleteFeedback={handleDeleteFeedback}
       />
     </div>
   );
 }
 
-export default Comentar;
+export default Feedback;

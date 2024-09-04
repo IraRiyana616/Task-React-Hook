@@ -1,4 +1,4 @@
-import Comentar from '../component/feedback/Feedback';
+import Feedback from '../component/feedback/Feedback';
 import Footers from '/src/component/Footer';
 import Navbar from '/src/component/Navbar';
 import React from 'react';
@@ -29,7 +29,7 @@ const Contacts = () => {
       style={{ marginTop: '82px' }}>
       <Navbar />
       {/* About Services */}
-      <Comentar />
+      <Feedback />
       {/* Card */}
       <div className="text-center px-16 my-8 bg-white dark:bg-gray-700">
         <h2 className="py-8 text-custom-30 font-neutralGrey font-semibold mb-2 text-black dark:text-white">
