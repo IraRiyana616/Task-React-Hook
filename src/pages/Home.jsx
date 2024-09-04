@@ -10,7 +10,7 @@ const Home = () => {
   const theme = localStorage.getItem('theme') || 'light';
 
   return (
-    <div className={`bg-brandPrimary dark:bg-brandPrimary`} id="/home">
+    <div className={`bg-brandPrimary dark:bg-gray-700`} id="/home">
       <Navbar />
       <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
         <Carousel className="w-full max-auto">

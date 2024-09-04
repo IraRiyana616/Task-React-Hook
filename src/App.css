@@ -35,3 +35,118 @@ header {
 .dark .text-white {
   color: #fff;
 }
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-left: 55px;
+  margin-top: 25px;
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.submit-button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 52px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.submit-button:hover {
+  background-color: #4d4d4d;
+}
+
+.suggestion-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 52px;
+}
+
+.suggestion-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.suggestion-text {
+  margin-top: 12px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: #4d4d4d;
+}
+
+.like-button {
+  background-color: #4cafaf;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100px;
+  margin-left: 1095px;
+}
+
+.like-button:hover {
+  background-color: #4d4d4d;
+}
+.name-avatar {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.show-more-button {
+  background-color: #4cafaf;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 52px;
+}
+
+.show-more-button:hover {
+  background-color: #4d4d4d;
+}

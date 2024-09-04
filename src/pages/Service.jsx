@@ -34,14 +34,14 @@ const Services = () => {
       id="service"
       style={{ marginTop: '82px' }}>
       <Navbar />
-      {/* About Services */}
-      <div className="px-16 lg:px:14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary dark:bg-brandPrimary">
+
+      <div className="px-16 lg:px:14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary dark:bg-gray-700">
         <div className=" flex flex-col md:flex-row justify-between items-center gap-12 ">
           <div>
             <img src={serviceImg} alt="" />
           </div>
           <div className="md:w-3/5 mx-auto ">
-            <h2 className="text-custom-30 text-black font-semibold mb-4 md:w-5/5">
+            <h2 className="text-custom-30 text-black dark: text-white font-semibold mb-4 md:w-5/5">
               Selamat datang di Layanan Bantuan{' '}
               <span className="text-white leading-snug"> PaDi UMKM </span>, Ada
               yang bisa kami bantu ?

@@ -1,3 +1,4 @@
+import Comentar from '../component/comentar/Comentar';
 import Footers from '/src/component/Footer';
 import Navbar from '/src/component/Navbar';
 import React from 'react';
@@ -28,7 +29,7 @@ const Contacts = () => {
       style={{ marginTop: '82px' }}>
       <Navbar />
       {/* About Services */}
-
+      <Comentar />
       {/* Card */}
       <div className="text-center px-16 my-8 bg-white dark:bg-gray-700">
         <h2 className="py-8 text-custom-30 font-neutralGrey font-semibold mb-2 text-black dark:text-white">
@@ -49,8 +50,7 @@ const Contacts = () => {
       text-center mx-auto rounded-md shadow-lg cursor-pointer 
       hover:-translate-y-5 hover:border-b-4 hover:border-indigo-700 
       transition-all duration-300 border border-grey900 bg-white dark:bg-grey"
-            style={{ width: '500px', height: '250px', padding: '16px' }} // Update dimensions here
-          >
+            style={{ width: '500px', height: '250px', padding: '16px' }}>
             <div className="bg-[#E8F5E9] mb-4 h-16 w-16 mx-auto rounded-tl-3xl rounded-br-3xl flex items-center justify-center">
               <img src={service.image} alt="" className="w-[65px] h-[65px]" />
             </div>
@@ -62,6 +62,7 @@ const Contacts = () => {
           </div>
         ))}
       </div>
+
       <Footers />
     </div>
   );

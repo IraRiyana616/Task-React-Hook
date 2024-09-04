@@ -11,7 +11,7 @@ const About = () => {
       style={{ marginTop: '82px' }}
       className="bg-white dark:bg-gray-700">
       <Navbar />
-      <div className="px-16 lg:px-14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary dark:bg-brandPrimary">
+      <div className="px-16 lg:px-14 py-7 max-w-screen-2xl mx-auto my-8 bg-brandPrimary dark:bg-gray-700">
         <div className="flex flex-col  md:flex-row justify-between items-center gap-12 ">
           <div className="md:w-3/5 mx-auto ">
             <h2 className="text-custom-40 text-white font-bold mb-8 md:w-5/5">
