@@ -1,4 +1,4 @@
-import Comentar from '../component/comentar/Comentar';
+import Comentar from '../component/feedback/Feedback';
 import Footers from '/src/component/Footer';
 import Navbar from '/src/component/Navbar';
 import React from 'react';

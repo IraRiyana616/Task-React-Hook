@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import SuggestionForm from '/src/component/comentar/SuggestionForm';
-import SuggestionList from '/src/component/comentar/SuggestionList';
+import SuggestionForm from '/src/component/feedback/FeedbackForm';
+import SuggestionList from '/src/component/feedback/FeedbackList';
 import '/src/App.css';
 
 function Comentar() {
