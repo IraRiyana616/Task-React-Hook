@@ -28,14 +28,6 @@ function Feedback() {
     });
   };
 
-  const handleDeleteFeedback = (id) => {
-    setFeedbacks((prevFeedbacks) => {
-      const updatedFeedbacks = prevFeedbacks.filter((item) => item.id !== id);
-      localStorage.setItem('feedbacks', JSON.stringify(updatedFeedbacks));
-      return updatedFeedbacks;
-    });
-  };
-
   return (
     <div className="container dark:black">
       <h1
@@ -50,11 +42,7 @@ function Feedback() {
         Silakan masukkan kritik dan saran Anda
       </p>
       <FeedbackForm onAddFeedback={handleAddFeedback} />
-      <FeedbackList
-        feedbacks={feedbacks}
-        onLikeFeedback={handleLikeFeedback}
-        onDeleteFeedback={handleDeleteFeedback}
-      />
+      <FeedbackList feedbacks={feedbacks} onLikeFeedback={handleLikeFeedback} />
     </div>
   );
 }
