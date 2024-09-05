@@ -14,6 +14,8 @@ function FeedbackForm({ onAddFeedback }) {
     }
   };
 
+  const isButtonDisabled = !(name && feedback);
+
   return (
     <form className="feedback-form" onSubmit={handleSubmit}>
       {/* Form Untuk Nama */}
@@ -27,19 +29,20 @@ function FeedbackForm({ onAddFeedback }) {
           className="form-input"
         />
       </div>
-      {/* Form Untuk Saran  */}
+      {/* Form Untuk Saran */}
       <div className="form-group">
         <textarea
           id="feedback"
           value={feedback}
           onChange={(e) => setFeedback(e.target.value)}
-          placeholder="Masukkan Saran Anda "
+          placeholder="Masukkan Saran Anda"
           className="form-textarea"
         />
       </div>
       <button
         type="submit"
-        className="submit-button bg-brandPrimary dark:bg-brandPrimary">
+        className="submit-button bg-brandPrimary dark:bg-brandPrimary"
+        disabled={isButtonDisabled}>
         Kirim Saran
       </button>
     </form>
